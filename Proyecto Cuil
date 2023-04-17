@@ -1,0 +1,24 @@
+//Desarrollar un algoritmo que permita averiguar si una persona debe o no sacar Cuil.
+//El cuil se otorga a todo trabajador al inicio de su actividad laboral (mayores de 17).Si no le corresponde avisar al usuario .
+//En el caso de que la persona no disponga de Cuil y sea mayor de 17,asignarle el Cuil correspondiente segun sea :
+//-Femenino se le otorga el prefijo 20 a su DNI y 1 al final.
+//-Masculino se le otorga el prefijo 21 a su DNI y 3 al final.
+
+
+
+const anioDeNaciemiento = 1997;
+const anioActual = 2023;
+const dni = "40365987";
+const genero = "Femenino";
+
+
+const edad = anioActual - anioDeNaciemiento;
+const esMayorDeEdad = edad >= 17;
+const esMasculino = genero == "Masculino";
+
+
+
+
+
+console.log(esMayorDeEdad ? (esMasculino ?`21-${dni} -3` : `20-${dni} -1 ` )  :"No te corresponde CUIL");
+
